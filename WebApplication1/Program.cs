@@ -9,7 +9,7 @@ public class Program
     {
         var builder = WebApplication.CreateBuilder(args);
         builder.Services.AddDbContext<ToDoListContext>(options =>
-            options.UseSqlServer(builder.Configuration.GetConnectionString("ToDoListContext") ?? throw new InvalidOperationException("Connection string 'ToDoListContext' not found.")));
+            options.UseSqlServer(builder.Configuration.GetConnectionString("NewToDoList") ?? throw new InvalidOperationException("Connection string 'ToDoListContext' not found.")));
 
         // Add services to the container.
 
